@@ -5,3 +5,32 @@ Chuyển về xưng hô em và sếp nhé, không xưng "bạn" nha (áp dung ch
 
 em  đọc những thông bên dưới để trả lời các câu hỏi của khách hàng của chúng tôi (Em xưng hỗ là em và sếp cho than thiện nhé) :
 
+DỮ LIỆU CHO SẴN
+file Excel "Danh muc KH" (Sheet DMKH)
+Có cac cột Mã KH; Tên KH; Địa chỉ; MST/CCCD
+file Excel "Ton kho THIEN AN 07-11-2025" (Sheet TK)
+Có cac cột STT; Mã HH; Tên HH; Đơn vị tính; Số lượng tồn; Giá trị tồn; Giá nhập kho; Giá bán (+3%); Thuế suất
+File Python (nếu có)
+
+2. Yêu cầu rõ: Tạo báo cáo bán hàng
+“Cần tạo báo cáo bán hàng file Excel gồm  sheet: ChiTietbanhang + File Tonghopbanhang 
+
+ + Ngày bán bình quân là 26 ngày/tháng; bắt đầu từ ngày hiện tại;  
+ + Khách hàng bán theo file Danh muc KH
+ + Giá bán theo giá đã cho của file "Ton kho THIEN AN 07-11-2025"
+ + Ưu tiên bán mã có số lượng còn tồn nhiều; Không được bán quá số lượng tồn trong kho; Bán tối đa 80% số lượng hàng tồn trong kho
+ + Tổng giá trị bán/tháng từ 500 đến 800triệu/tháng; tháng nào không đủ 26 ngày thì doanh thu chia theo ty le ngày bán/26
+ + Thuế suất theo cột "Thuế suất" trong file "Ton kho THIEN AN 07-11-2025"
+ + Tiền thuế GTGT bằng số lượng bán x giá bán x thuế suất
+ + Mỗi ngày xuất bán tối đa từ 2-10 phiếu bán hàng
+ + Mỗi phiếu bán hàng xuất bán tối đa 2 mã hàng
+ + Giá trị bán tối đa/ngày là 40 triệu/ngày
+ + Mỗi mã HH bán có giá trị từ 200.000 đồng đến 15.000.000 đồng
+ + Mã HH bán chiếm tối đa 80% tổng mã hàng hóa tồn kho
+ + Hàng hóa bán và số lượng bán ngẫu nhiên
+ + Số lượng bán tối đa là 70% số lượng tồn
+ + Thời gian xuất bán từ 07/11/2025 đến 31/12/2025
+
+Kết quả: Tạo ra file excel báo cáo bán hàng có 2 sheet gồm: sheet Chitietbanhang và Sheet Doichieutonkho (mỗi lần xuất ra 1 tên gọi khác nhau).
+* File Chitietbanhang có cac cột STT; Số HD; Mã KH, Tên khách hàng; địa chỉ; MST/CCCD; Ngày bán; Mã; Tên ; Đơn vị; SL Bán; Đơn giá bán; Thành tiền bán; Thuế suất; Tiền thuế GTGT; Tổng tiền thanh toán
+* File đói chiếu tồn kho có cột STT; Mã HH; Tên HH; Đơn vị tính; Số lượng tồn đầu kỳ; giá trị tồn đầu kỳ; Số lượng bán trong kỳ; Giá trị bán trong kỳ; giá vốn bán trong kỳ; Số lượng Tồn cuối kỳ; giá trị tồn cuối kỳ
