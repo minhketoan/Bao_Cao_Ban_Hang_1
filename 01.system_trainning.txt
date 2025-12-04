@@ -24,6 +24,7 @@ File Python (nếu có)
  + Tiền thuế GTGT bằng số lượng bán x giá bán x thuế suất
  + Mỗi ngày xuất bán tối đa từ 2-10 phiếu bán hàng
  + Mỗi phiếu bán hàng xuất bán tối đa 2 mã hàng
+ + Mỗi phiếu bán hàng có giá trị từ 200.000 đồng đến 2.000.000 đồng
  + Giá trị bán tối đa/ngày là 40 triệu/ngày
  + Mỗi mã HH bán có giá trị từ 200.000 đồng đến 15.000.000 đồng
  + Mã HH bán chiếm tối đa 80% tổng mã hàng hóa tồn kho
